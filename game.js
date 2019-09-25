@@ -34,7 +34,17 @@ if(driehoek == "ja"){
     alert("wil je gewoon doen wat ik je vraag het ies niet moeilijk ofzo");
     exit;
 }
-
+//teskt dat dit apart houd omdat ik dat wil dus let niet op mij!
 if(ddroog == "vuur"  || vdroog == "vuur" ||  cdroog == "vuur"){
-    alert("je planeet is een vuurbal goedgedaan, je kan niks meer doen je vuurbal is weg. waarom? SINDS WANNEER BRAND VUUR IN DE RUIMTE! u failed.")
+    alert("je planeet is een vuurbal goedgedaan, je kan niks meer doen je vuurbal is weg. waarom? SINDS WANNEER BRAND VUUR IN DE RUIMTE! u failed.");
+}else if (ddroog == "lava" || vdroog == "lava" || cdroog == "lava"){
+    var startnether = prompt("Okay je hebt voor lava gekozen, wil je nu dat je een soort onderwereld maken of wil je gewoon aarde erbij? (Type onderwereld of aarde voor je keuze.");
+}else if(ddroog == "nee" || vdroog == "nee" || cdroog == "nee"){
+    var desert = prompt("okay geen vloeistof op je planeet dus je planeet dus je wilt een woestijn achtig iets? ja of nee");
+}else if(dwater == "ja" || vwater == "ja" || cwater == "ja"){
+    var wereld = prompt("okay je bent een echt planeet aan het maken wat leuk. maar nu is de vraag wil je planten op planeet? ja of nee?")
+}else if (dwater == "nee" || vwater == "nee" || cwater == "nee"){
+    alert("ik vraag me af of je wel na denkt je planeet is van water ja alleen water valt dan dan niet uit een op een gegeven moment? je bent dood trouwens.")
+}else{
+    alert("BEANTWOORD DE VRAAG IS DAT ECHT ZO MOEILIJK!")
 }
