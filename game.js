@@ -1,60 +1,50 @@
-var start = prompt("je gaat een planeet maken, een planeet die naar jouw smaak is gemaakt. als je het spel wilt spelen type dan creatie.");
-//teskt dat dit apart houd omdat ik dat wil dus let niet op mij!
-if(start == "creatie"){
-    var begin = prompt("wat voor vorm moet je planeet zijn? driehoek, vierkant of een cirkel?");
-} else{
-    alert("nice try buddie -_-");
-    exit;
-}
-//teskt dat dit apart houd omdat ik dat wil dus let niet op mij!
-if(begin == "driehoek"){
-    var driehoek = prompt("Een driehoek hmmm, okay je heb een rare smaak maar dit kan. wil je dat er water is op de planeet of niet? (beantwoord met ja of nee)");
-}else if(begin == "vierkant"){
-    var vierkant = prompt("zo je houd van minecraft wat leuk, wil je water op je planeet of niet? (beantwoord met ja of nee)");
-}else if(begin == "cirkel"){
-    var cirkel = prompt("okay je bent standaard, saai! maar wil je water op je planeet of niet? (beantwoord met ja of nee)");
-}else{
-    alert("ik maar het niet echt moeilijk weet je dat DE VRAAG WAS SIMPEL!");
-    exit;
-}
-//teskt dat dit apart houd omdat ik dat wil dus let niet op mij!
-if(driehoek == "ja"){
-    var dwater = prompt("je planeet is nu helemaal van water het heeft geen kern of land, wil je deze toevoegen? ja of nee");
-}else if(driehoek == "nee"){
-    var ddroog = prompt("okay je hebt geen water op de planeet, wil je dan inplaats van water vuur of lava hebben dan? (kies tussen nee, vuur of lava)");
-}else if(vierkant == "ja"){
-    var vwater = prompt("je planeet is nu helemaal van water het heeft geen kern of land, wil je deze toevoegen? ja of nee");
-} else if(vierkant == "nee"){
-    var vdroog = prompt("okay je hebt geen water op de planeet, wil je dan inplaats van water vuur of lava hebben dan? (kies tussen nee, vuur of lava)");
-}else if(cirkel == "ja"){
-    var cwater = prompt("je planeet is nu helemaal van water het heeft geen kern of land, wil je deze toevoegen? ja of nee");
-} else if (cirkel == "nee"){
-    var cdroog = prompt("okay je hebt geen water op de planeet, wil je dan inplaats van water vuur of lava hebben dan? (kies tussen nee, vuur of lava");
-} else{
-    alert("wil je gewoon doen wat ik je vraag het ies niet moeilijk ofzo");
-    exit;
-}
-//teskt dat dit apart houd omdat ik dat wil dus let niet op mij!
-if(ddroog == "vuur"  || vdroog == "vuur" ||  cdroog == "vuur"){
-    alert("je planeet is een vuurbal goedgedaan, je kan niks meer doen je vuurbal is weg. waarom? SINDS WANNEER BRAND VUUR IN DE RUIMTE! u failed.");
-}else if (ddroog == "lava" || vdroog == "lava" || cdroog == "lava"){
-    var startnether = prompt("Okay je hebt voor lava gekozen, wil je nu dat je een soort lavawereld maken of wil je gewoon aarde erbij? (Type lava of aarde voor je keuze.");
-}else if(ddroog == "nee" || vdroog == "nee" || cdroog == "nee"){
-    var desert = prompt("okay geen vloeistof op je planeet dus je planeet dus je wilt een woestijn achtig iets? ja of nee");
-}else if(dwater == "ja" || vwater == "ja" || cwater == "ja"){
-    var wereld = prompt("okay je bent een echt planeet aan het maken wat leuk. maar nu is de vraag wil je planten op planeet? ja of nee?");
-}else if (dwater == "nee" || vwater == "nee" || cwater == "nee"){
-    alert("ik vraag me af of je wel na denkt. je planeet is van water alleen maar water dat blijft niet bij elkaar. u failed.");
-}else{
-    alert("BEANTWOORD DE VRAAG IS DAT ECHT ZO MOEILIJK!");
-}
-//teskt dat dit apart houd omdat ik dat wil dus let niet op mij!
-if(wereld == "ja"){
-    var planten = prompt();
-}else if(wereld == "nee"){
-    var gplanten = prompt();
-}else if(startnether == "lava"){
-    var lava = prompt();
-}else if(startnether == "aarde"){
+alert("welcome to the GAME!")
 
+
+var a = 0
+var vraag = "";
+var bessen = "";
+var strand = "";
+var hut = "";
+var eten = "";
+function next() {
+  a += 1
+  if(a == 1){
+    alert("je bent tijdens een geweldig leuk feestje op een boot genaamd Royal Princess. je hebt het zo naar je zin dat je perongelijk teveel hebt gedronken. daardoor wist je niet meer wat je deed en je sprong van het schip. je wordt wakker op een onbewoond eiland. (Succes met overleven op het eiland)")
+  }else if(a == 2){
+    alert("dag 1")
+    vraag = prompt("Je wordt wakker niet wetend wat er gebeurt is. je kijkt rond op het eiland. het eerste wat in je opkomt is dat je eten moet halen of een schuilplaats moet maken. kies schuilplaats of eten halen.")
+    if(vraag == "schuilplaats"){
+      alert("Je loopt het strand over en gaat het bos in. Je vind veel takken en neemt ze mee. Je vind een prachtige plek aan de zijkant van een boom en zet daar je takken tegen aan.")
+      hut = prompt("Je ligt in je schuilplaats en het begint te regenen je bent heel blij dat je je schuilplaats af hebt. je kan nu kiezen of je wilt slapen of wil je toch nog verder verkennen in de regen.(type verkennen of slapen)")
+      if(hut == "verkennen"){
+        alert("je loopt langs een rivier en je raakt de weg kwijt. je hoort achter je iets raars je draait je om en je ziet een kleine beer.")
+        alert("achter de kleine beer staat mama beer ze eet je op.")
+        alert("U Died!")
+        a="dood"
+      }
+    }else if(vraag == "eten halen"){
+      alert("Je loopt rond op het strand en je ziet een bessen struik vol met rode bessen je denk niet 2 keer na en rent er heen.")
+      bessen = prompt("je plukt de bessen en eet ze direct op. je kijkt naar de zee en ziet dat de zon al onder gaat. je kijkt snel om je heen en je ziet een boom en de struik waar je net van geplukt had. ga je onder de struik of in de boom slapen? (type boom of struik.)")
+    }
+  }else if(a == 3){
+    alert("dag 2")
+    if(hut == "slapen"){
+      alert("je slaapt door de nacht heen. je wordt wakker en je ziet dat je veilig hebt kunnen slapen. je maag begint te rammelen je gaat je hut uit en kijkt om je heen.")
+      alert("Je loopt voorzichtig van je hut vandaan en vind een appel boom vol met appels. je pakt een tak en slaat er 2 vanaf je eet ze op. zee zijn heerlijk. ")
+      eten = prompt("je bedenkt dat je een manier nodig hebt om jezelf te beschermen. je vind een hele dikke tak een een pols dikte tak je bedenkt dat je deze kan gebruiken je ziet oof een grote steen. (type tak slijpen of knots. om te kiezen.) ")
+    }else if(bessen == "boom"){
+      alert("Je je sliep heerlijk in de boom. je kijkt naar benden en ziet twee beren lopen je houd jezelf dood stil en de twee beren liepen weg.")
+      alert("je klom omlaag en je keek om je heen. je zag om het strand een oud schip vrak je liep er heen en vind een geladen flaregun. je stopt hem en je achter zak.")
+      strand = prompt("Na dat je hele schip vrak het door zocht heb je 1 zwaard, 1 geladen flaregun, 2 blikken eten en 1 laken gevonden. je kan nu kiezen of je het schip je schuilplaats wil maken of verder wil verkennen.(type schip of verkennen)")
+    }else if(bessen == "struik"){
+      alert("je hebt niet lekker geslapen onder de struik. je komt onder de struik vandaan en je hoort iets achter je en je draait je om.")
+      alert("je staat oog in oog met een beer. de beer valt aan. je bent dood.")
+      a = "dood"
+    }
+  }
 }
+function back(){
+  alert("Your game has been rest")
+  a = 0
+}d

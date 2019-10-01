@@ -1,3 +1,7 @@
 body{
-    background-image: url("img/achtergrond.jpg");
+    background-image: url("img/achtegrond.jpg");
 }
+button.right {
+    position: relative;
+    left: 1415px;
+  }
